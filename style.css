@@ -1,0 +1,131 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(120deg, #ec008c 0%, #fc6767 100%);
+  color: #232323;
+}
+.container {
+  max-width: 900px;
+  margin: 2em auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(44, 44, 44, 0.15);
+  overflow: hidden;
+}
+header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #fc6767 0%, #ec008c 100%);
+  color: #fff;
+  padding: 2em 2em 1em 2em;
+}
+.profile-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 16px #ec008c88;
+  animation: floatPhoto 2.5s infinite alternate;
+}
+@keyframes floatPhoto {
+  to { transform: translateY(-8px) scale(1.04);}
+}
+.profile-info {
+  margin-left: 2em;
+}
+.profile-info h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.profile-info h2 {
+  margin: 0.2em 0;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.profile-info p, .profile-info .github-link {
+  margin: 0.7em 0;
+  font-size: 1em;
+}
+.github-link a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  background: #232323;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+.github-link a:hover {
+  background: #ec008c;
+}
+main {
+  padding: 2em;
+}
+section {
+  margin-bottom: 2em;
+}
+section h3 {
+  color: #ec008c;
+  margin-bottom: 0.7em;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+.stats {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  background: #fafafa;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 6px #fc676760;
+}
+.stats img {
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #ec008c30;
+  transition: transform 0.2s;
+  animation: floatStats 4s infinite alternate;
+}
+@keyframes floatStats {
+  to { transform: scale(1.04) rotate(-2deg);}
+}
+.date {
+  float: right;
+  color: #fc6767;
+  font-weight: bold;
+}
+footer {
+  background: #fc6767;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-info {
+    margin: 1em 0 0 0;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats img {
+    width: 100%;
+  }
+}
